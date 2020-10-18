@@ -1,11 +1,14 @@
 import React from 'react';
+import SearchIcon from '@material-ui/icons/Search';
+import MenuIcon from '@material-ui/icons/Menu';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 function Header() {
   return (
     <header className='header'>
       <div className='header__brand'>
         <button classNam='header__hamburgerMenu' onClick={() => {}}>
-          ICON
+          <MenuIcon style={{ fontSize: '3rem' }} />
         </button>
         <a href='index.html'>
           amakey
@@ -17,7 +20,15 @@ function Header() {
 
       <div className='header__search'>
         <input className='header__searchInput' type='text' />
-        ICON
+        <SearchIcon
+          style={{
+            height: '3rem',
+            width: '3rem',
+            marginTop: '0.5rem',
+            marginLeft: '0.7rem',
+            marginRight: '0.3rem',
+          }}
+        />
       </div>
 
       <div className='header__nav'>
@@ -30,7 +41,7 @@ function Header() {
           <span className='header__navLinkTwo'>& Orders</span>
         </div>
         <div className='header__shoppingCart'>
-          ICON
+          <ShoppingCartIcon style={{ fontSize: '3.5rem' }} />
           <span className='header__basketCount'>0</span>
         </div>
       </div>
