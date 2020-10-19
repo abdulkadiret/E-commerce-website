@@ -162,3 +162,33 @@ body {
   list-style-type: none;
   z-index: 1;
 }
+
+.product__name {
+  margin: 1rem 0;
+}
+
+.product__name > a:hover {
+  color: #00fff2;
+}
+
+.product__brand {
+  margin: 1rem 0;
+  color: #808080;
+}
+
+.product__price {
+  margin: 1rem 0;
+}
+
+.product__image {
+  max-width: 25rem;
+  max-height: 34rem;
+}
+
+.product__rating {
+  margin: 1rem 0;
+}
+
+.product__rating > span {
+  border-bottom: 1px solid #b1b1b1;
+}
