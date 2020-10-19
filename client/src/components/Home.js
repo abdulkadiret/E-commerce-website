@@ -1,4 +1,5 @@
 import React from 'react';
+import Products from './Products';
 
 const Home = () => {
   return (
@@ -10,11 +11,7 @@ const Home = () => {
           className='home__image'
         />
       </div>
-      <ul className='products'>
-        <li className='product'>Product 1</li>
-        <li className='product'>Product 2</li>
-        <li className='product'>Product 3</li>
-      </ul>
+      <Products />
     </main>
   );
 };
