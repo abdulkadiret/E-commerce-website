@@ -192,3 +192,58 @@ body {
 .product__rating > span {
   border-bottom: 1px solid #b1b1b1;
 }
+
+.sidebar {
+  display: grid;
+  grid-template-areas:
+    'sidebarLeft'
+    'sidebarRight';
+  grid-template-columns: 27rem 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  transition: all 0.3s;
+  transform: translateX(0rem);
+  width: 100%;
+  background-color: #00000040;
+  height: 100%;
+  z-index: 20;
+}
+
+.sidebar__left {
+  grid-area: sidebarLeft;
+  background-color: #f0f0f0;
+  color: #ffffff;
+}
+
+.sidebar__right {
+  grid-area: sidebarRight;
+  background-color: #00000070;
+}
+
+.sidebar__header {
+  margin-top: 0;
+  background: #131921;
+  height: 6rem;
+  width: 27rem;
+  position: relative;
+  top: -1.9rem;
+}
+
+.sidebar__title {
+  margin-left: 2rem;
+  color: #ffffff;
+  padding-top: 1.9rem;
+}
+
+.sidebar__closeButton {
+  border-radius: 50%;
+  background: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0.7rem;
+  top: 1.5rem;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Products from './Products';
+import Sidebar from './Sidebar';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
           className='home__image'
         />
       </div>
+      <Sidebar />
       <Products />
     </main>
   );
