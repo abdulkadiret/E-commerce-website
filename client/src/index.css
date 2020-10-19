@@ -36,6 +36,10 @@ body {
   z-index: 10;
 }
 
+.home {
+  grid-area: main;
+}
+
 .footer {
   grid-area: footer;
   background-color: #2c2c2c;
@@ -126,4 +130,35 @@ body {
   color: #febd69;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.home__container {
+  height: 22rem;
+  z-index: -1;
+}
+
+.home__image {
+  width: 100%;
+  margin-bottom: -6rem;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 1 34rem;
+  height: 100%;
+  padding: 0;
+  margin: 1rem;
+  list-style-type: none;
+  z-index: 1;
 }
