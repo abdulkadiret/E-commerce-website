@@ -4,10 +4,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 function Header() {
+  const openMenu = () => {
+    document.querySelector('.sidebar').classList.add('open');
+  };
   return (
     <header className='header'>
       <div className='header__brand'>
-        <button classNam='header__hamburgerMenu' onClick={() => {}}>
+        <button classNam='header__hamburgerMenu' onClick={openMenu}>
           <MenuIcon style={{ fontSize: '3rem' }} />
         </button>
         <a href='index.html'>

@@ -3,6 +3,9 @@ import Products from './Products';
 import Sidebar from './Sidebar';
 
 const Home = () => {
+  const closeMenu = () => {
+    document.querySelector('.sidebar').classList.remove('open');
+  };
   return (
     <main className='home'>
       <div className='home__container'>
@@ -12,7 +15,7 @@ const Home = () => {
           className='home__image'
         />
       </div>
-      <Sidebar />
+      <Sidebar closeMenu={closeMenu} />
       <Products />
     </main>
   );
