@@ -213,8 +213,22 @@ body {
 
 .sidebar__left {
   grid-area: sidebarLeft;
+  background-image: url('/images/sidebar.jpg');
   background-color: #f0f0f0;
-  color: #ffffff;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.sidebar__leftOverlay {
+  background-color: #ffffffd1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .sidebar__right {
