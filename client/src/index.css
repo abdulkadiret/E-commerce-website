@@ -137,10 +137,9 @@ body {
   z-index: -1;
 }
 
-.home__image {
-  width: 100%;
-  margin-bottom: -6rem;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+.slide__image {
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
 .products {
@@ -264,4 +263,51 @@ body {
   position: absolute;
   right: 0.7rem;
   top: 1.5rem;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.swipe__slide {
+  position: absolute;
+  transform: translateY(-100%);
+  width: 7rem;
+  top: 23rem;
+  height: 23rem;
+  background: none;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+
+.swipe__slide:hover > .chevron__icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #cccccc;
+  cursor: pointer;
+}
+
+#goLeft {
+  left: 0;
+}
+
+#goRight {
+  right: 0;
 }
