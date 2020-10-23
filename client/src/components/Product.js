@@ -12,7 +12,9 @@ const Product = ({
 }) => {
   return (
     <li className='product' key={productId}>
-      <img className='product__image' src={image} alt='product' />
+      <Link to={`/product/${productId}`}>
+        <img className='product__image' src={image} alt='product' />
+      </Link>
       <h3 className='product__name'>
         <Link to={`/product/${productId}`}>{name}</Link>
       </h3>
