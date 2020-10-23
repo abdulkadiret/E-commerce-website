@@ -1,7 +1,7 @@
 export default {
   products: [
     {
-      productId: 1,
+      productId: '1',
       name: 'Slim Shirt',
       category: 'shirts',
       image: '/images/d1.jpg',
@@ -11,7 +11,7 @@ export default {
       numberOfReviews: 22,
     },
     {
-      productId: 2,
+      productId: '2',
       name: 'Slim Shirt',
       category: 'shirts',
       image: '/images/d2.jpg',
@@ -21,7 +21,7 @@ export default {
       numberOfReviews: 8,
     },
     {
-      productId: 3,
+      productId: '3',
       name: 'Slim Shirt',
       category: 'shirts',
       image: '/images/d3.jpg',
@@ -31,7 +31,7 @@ export default {
       numberOfReviews: 10,
     },
     {
-      productId: 4,
+      productId: '4',
       name: 'Slim Shirt',
       category: 'shirts',
       image: '/images/d4.jpg',
@@ -41,7 +41,7 @@ export default {
       numberOfReviews: 17,
     },
     {
-      productId: 5,
+      productId: '5',
       name: 'Slim Shirt',
       category: 'shirts',
       image: '/images/d5.jpg',
@@ -51,7 +51,7 @@ export default {
       numberOfReviews: 12,
     },
     {
-      productId: 6,
+      productId: '6',
       name: 'Slim Shirt',
       category: 'shirts',
       image: '/images/d6.jpg',
@@ -61,7 +61,7 @@ export default {
       numberOfReviews: 20,
     },
     {
-      productId: 7,
+      productId: '7',
       name: 'Slim Shirt',
       category: 'shirts',
       image: '/images/d7.jpg',
