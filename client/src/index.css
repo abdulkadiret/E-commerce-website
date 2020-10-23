@@ -311,3 +311,91 @@ body {
 #goRight {
   right: 0;
 }
+
+/* Product Details*/
+.details {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.details__image {
+  flex: 1 1 44rem;
+}
+
+.details__image > img {
+  max-width: 160rem;
+  height: calc(100vh - 19rem);
+}
+
+.details__info,
+.details__action {
+  flex: 1 1 20rem;
+}
+
+.details__info ul,
+.details__action ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.details__info li,
+.details__action li {
+  margin-bottom: 1rem;
+}
+
+.details__info ul > li:first-child > h3 {
+  margin-bottom: 0;
+}
+
+.product__reviews > p {
+  margin: 0.5rem 0;
+}
+
+.details__action {
+  border: 0.1rem solid #808080;
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+}
+
+.details__action ul > li:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn__addToCart {
+  background-color: #febd69;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn__addToCart:hover {
+  background-color: #ffb540;
+}
+
+input[type='number'] {
+  /*for absolutely positioning spinners*/
+  appearance: none;
+  margin: 0;
+  position: relative;
+  width: 40px;
+  padding: 0.3rem 2rem 0.3rem 0.5rem;
+  font-size: 12pt;
+  border: 1px solid #808080;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  opacity: 1;
+  width: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
