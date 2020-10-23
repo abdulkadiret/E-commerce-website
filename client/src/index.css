@@ -378,6 +378,18 @@ body {
   background-color: #ffb540;
 }
 
+.back__to__homePage {
+  padding: 1rem;
+}
+
+.link__to__homePage {
+  text-decoration: none;
+}
+
+.link__to__homePage:hover {
+  color: #ff9000;
+}
+
 input[type='number'] {
   /*for absolutely positioning spinners*/
   appearance: none;
