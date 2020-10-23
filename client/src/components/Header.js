@@ -2,6 +2,7 @@ import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const openMenu = () => {
@@ -13,12 +14,12 @@ function Header() {
         <button classNam='header__hamburgerMenu' onClick={openMenu}>
           <MenuIcon style={{ fontSize: '3rem' }} />
         </button>
-        <a href='index.html'>
+        <Link to='/'>
           amakey
           <small style={{ fontSize: '1.4rem', fontWeight: '100' }}>
             .co.uk
           </small>
-        </a>
+        </Link>
       </div>
 
       <div className='header__search'>

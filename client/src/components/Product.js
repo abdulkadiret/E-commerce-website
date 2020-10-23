@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Product = ({
   productId,
@@ -13,7 +14,7 @@ const Product = ({
     <li className='product' key={productId}>
       <img className='product__image' src={image} alt='product' />
       <h3 className='product__name'>
-        <a href='product.html'>{name}</a>
+        <Link to={`/product/${productId}`}>{name}</Link>
       </h3>
       <h5 className='product__brand'>{brand}</h5>
       <h3 className='product__price'>£{price}</h3>
