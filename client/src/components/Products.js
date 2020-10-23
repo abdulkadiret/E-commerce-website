@@ -14,6 +14,7 @@ const Products = () => {
           price={product.price}
           rating={product.rating}
           numberOfReviews={product.numberOfReviews}
+          description={product.description}
         />
       ))}
     </ul>

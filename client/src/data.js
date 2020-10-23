@@ -9,6 +9,7 @@ export default {
       brand: 'Nike',
       rating: 4.0,
       numberOfReviews: 22,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
       productId: '2',
@@ -19,6 +20,7 @@ export default {
       brand: 'Nike',
       rating: 5.0,
       numberOfReviews: 8,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
       productId: '3',
@@ -29,6 +31,7 @@ export default {
       brand: 'Nike',
       rating: 4.5,
       numberOfReviews: 10,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
       productId: '4',
@@ -39,6 +42,7 @@ export default {
       brand: 'Nike',
       rating: 4.3,
       numberOfReviews: 17,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
       productId: '5',
@@ -49,6 +53,7 @@ export default {
       brand: 'Nike',
       rating: 4.5,
       numberOfReviews: 12,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
       productId: '6',
@@ -59,6 +64,7 @@ export default {
       brand: 'Nike',
       rating: 4.7,
       numberOfReviews: 20,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
       productId: '7',
@@ -69,6 +75,7 @@ export default {
       brand: 'Nike',
       rating: 4.0,
       numberOfReviews: 10,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
   ],
 };
