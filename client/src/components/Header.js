@@ -11,7 +11,7 @@ function Header() {
   return (
     <header className='header'>
       <div className='header__brand'>
-        <button classNam='header__hamburgerMenu' onClick={openMenu}>
+        <button className='header__hamburgerMenu' onClick={openMenu}>
           <MenuIcon style={{ fontSize: '3rem' }} />
         </button>
         <Link to='/'>
