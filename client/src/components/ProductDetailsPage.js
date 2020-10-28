@@ -85,7 +85,11 @@ const ProductDetailsPage = (props) => {
                   min='0'
                   max={product.countInStock}
                   id='qty'
-                  value={qty}
+                  value={
+                    product.countInStock > 0 && qty <= product.countInStock
+                      ? qty
+                      : ''
+                  }
                   onChange={handleChange}
                 />
               </li>
