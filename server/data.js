@@ -10,6 +10,7 @@ module.exports = {
       rating: 4.0,
       numberOfReviews: 22,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      countInStock: 4,
     },
     {
       productId: '2',
@@ -19,8 +20,9 @@ module.exports = {
       price: 80,
       brand: 'Nike',
       rating: 5.0,
-      numberOfReviews: 8,
+      numberOfReviews: 2,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      countInStock: 0,
     },
     {
       productId: '3',
@@ -43,6 +45,7 @@ module.exports = {
       rating: 4.3,
       numberOfReviews: 17,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      countInStock: 6,
     },
     {
       productId: '5',
@@ -54,6 +57,7 @@ module.exports = {
       rating: 4.5,
       numberOfReviews: 12,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      countInStock: 2,
     },
     {
       productId: '6',
