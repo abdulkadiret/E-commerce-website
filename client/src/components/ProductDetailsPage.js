@@ -20,7 +20,9 @@ const ProductDetailsPage = (props) => {
   };
 
   const handleAddToCart = () => {
-    props.history.push(`/cart/${props.match.params.id}?qty=${qty}`);
+    props.history.push(
+      `/cart/${props.match.params.id}?qty=${parseInt(qty, 10)}`
+    );
   };
 
   return (
