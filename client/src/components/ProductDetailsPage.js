@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsProduct } from '../redux/actions/actions';
 
 const ProductDetailsPage = (props) => {
+  const [qty, setQty] = useState(1);
   const productDetails = useSelector((state) => state.productDetails);
   const { product, loading, error } = productDetails;
 
@@ -13,6 +14,10 @@ const ProductDetailsPage = (props) => {
   useEffect(() => {
     dispatch(detailsProduct(props.match.params.id));
   }, []);
+
+  const handleChange = (e) => {
+    setQty(e.target.value);
+  };
 
   return (
     <div>
@@ -62,15 +67,15 @@ const ProductDetailsPage = (props) => {
               <li className='product__price'>Price: {product.price}</li>
               <li>Status: {product.status}</li>
               <li className='product__rating'>
-                <label for='qty' size='3' style={{ marginRight: '0.4rem' }}>
-                  Qty:
-                </label>
+                <label for='qty'>Qty: </label>
                 <input
                   type='number'
                   step='1'
                   min='0'
+                  max={product.countInStock}
                   id='qty'
-                  defaultValue='0'
+                  value={qty}
+                  onChange={handleChange}
                 />
               </li>
               <li>
