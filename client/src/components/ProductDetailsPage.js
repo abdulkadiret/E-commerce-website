@@ -19,6 +19,10 @@ const ProductDetailsPage = (props) => {
     setQty(e.target.value);
   };
 
+  const handleAddToCart = () => {
+    props.history.push(`/cart/${props.match.params.id}?qty=${qty}`);
+  };
+
   return (
     <div>
       <div className='back__to__homePage'>
@@ -65,7 +69,14 @@ const ProductDetailsPage = (props) => {
           <div className='details__action'>
             <ul>
               <li className='product__price'>Price: {product.price}</li>
-              <li>Status: {product.status}</li>
+              <li>
+                Status:{' '}
+                {product.countInStock > 0 ? (
+                  <span>In Stock</span>
+                ) : (
+                  <span>Unavailable</span>
+                )}
+              </li>
               <li className='product__rating'>
                 <label for='qty'>Qty: </label>
                 <input
@@ -79,7 +90,11 @@ const ProductDetailsPage = (props) => {
                 />
               </li>
               <li>
-                <button className='btn__addToCart'>Add to Cart</button>
+                {product.countInStock > 0 && (
+                  <button className='btn__addToCart' onClick={handleAddToCart}>
+                    Add to Cart
+                  </button>
+                )}
               </li>
             </ul>
           </div>
