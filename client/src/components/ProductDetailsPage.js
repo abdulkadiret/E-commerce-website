@@ -84,7 +84,7 @@ const ProductDetailsPage = (props) => {
                 <input
                   type='number'
                   step='1'
-                  min='0'
+                  min='1'
                   max={product.countInStock}
                   id='qty'
                   value={
