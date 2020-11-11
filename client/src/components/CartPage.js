@@ -19,6 +19,10 @@ const CartPage = (props) => {
     }
   }, []);
 
+  const addToCartHandler = (productId, qty) => {
+    dispatch(addToCart(productId, qty));
+  };
+
   const removeFromCartHandler = (productId) => {
     dispatch(removeFromCart(productId));
   };
@@ -57,7 +61,7 @@ const CartPage = (props) => {
                       id='cart__qty'
                       defaultValue={item.qty}
                       onChange={(e) =>
-                        dispatch(addToCart(item.productId, e.target.value))
+                        addToCartHandler(item.productId, e.target.value)
                       }
                     />
                     <input
