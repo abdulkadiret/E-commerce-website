@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../redux/actions/actions';
+import { addToCart, removeFromCart } from '../redux/actions/actions';
 import { Link } from 'react-router-dom';
 
 const CartPage = (props) => {
@@ -18,6 +18,10 @@ const CartPage = (props) => {
       dispatch(addToCart(productId, qty));
     }
   }, []);
+
+  const removeFromCartHandler = (productId) => {
+    dispatch(removeFromCart(productId));
+  };
 
   return (
     <div className='cart'>
@@ -51,6 +55,12 @@ const CartPage = (props) => {
                       onChange={(e) =>
                         dispatch(addToCart(item.productId, e.target.value))
                       }
+                    />
+                    <input
+                      type='button'
+                      className='button btn__delete'
+                      value='Delete'
+                      onClick={() => removeFromCartHandler(item.productId)}
                     />
                   </div>
                 </div>

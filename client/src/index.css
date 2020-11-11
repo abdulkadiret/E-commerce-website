@@ -490,3 +490,14 @@ button {
 .button.primary:hover {
   background-color: #ffb540;
 }
+
+.btn__delete {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  margin-left: 1rem;
+  text-align: center;
+  cursor: pointer;
+}

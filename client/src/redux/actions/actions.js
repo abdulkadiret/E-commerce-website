@@ -40,4 +40,12 @@ const addToCart = (productId, qty) => async (dispatch) => {
   }
 };
 
-export { listProducts, detailsProduct, addToCart };
+const removeFromCart = (productId) => async (dispatch) => {
+  try {
+    dispatch({ type: actions.REMOVE_FROM_CART, payload: productId });
+  } catch (error) {
+    //
+  }
+};
+
+export { listProducts, detailsProduct, addToCart, removeFromCart };
