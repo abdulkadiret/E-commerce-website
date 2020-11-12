@@ -4,6 +4,7 @@ import data from './data';
 import dotenv from 'dotenv';
 import config from './config';
 import mongoose from 'mongoose';
+import userRoute from './routes/userRoute';
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ mongoose
   })
   .catch((error) => console.log(error.reason));
 
+app.use('/api/users', userRoute);
 app.get('/api/products', (req, res) => {
   res.send(data.products);
 });
