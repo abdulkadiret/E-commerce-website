@@ -7,3 +7,8 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   isAdmin: { type: Boolean, required: true, default: false },
 });
+
+//Create user model(collection) with name 'User' based on the userSchema
+const userModel = mongoose.model('User', userSchema);
+
+export default userModel;
