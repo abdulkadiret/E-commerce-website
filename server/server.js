@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import config from './config';
 import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
+import morgan from 'morgan';
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ mongoose
   })
   .catch((error) => console.log(error.reason));
 
+app.use(morgan('tiny'));
 app.use('/api/users', userRoute);
 app.get('/api/products', (req, res) => {
   res.send(data.products);
