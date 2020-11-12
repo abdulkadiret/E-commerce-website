@@ -1,6 +1,25 @@
 import express from 'express';
 const app = express();
-import data, { products } from './data';
+import data from './data';
+import dotenv from 'dotenv';
+import config from './config';
+import mongoose from 'mongoose';
+
+dotenv.config();
+
+//Get access to mongodbUrl
+const mongodbUrl = config.MONGODB_URL;
+mongoose
+  .connect(mongodbUrl, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  //verify the connection
+  .then(() => {
+    console.log('MongoDB Connected... ');
+  })
+  .catch((error) => console.log(error.reason));
 
 app.get('/api/products', (req, res) => {
   res.send(data.products);
