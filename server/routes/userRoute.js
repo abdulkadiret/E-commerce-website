@@ -5,9 +5,10 @@ import { getToken } from '../util';
 const router = express.Router();
 
 router.post('/signin', async (req, res) => {
+  const { email, password } = req.body;
   const signinUser = await User.findOne({
-    email: req.body.email,
-    password: req.body.password,
+    email: email,
+    password: password,
   });
 
   if (signinUser) {
@@ -19,7 +20,7 @@ router.post('/signin', async (req, res) => {
       token: getToken(signinUser),
     });
   } else {
-    res.status(401).send({ msg: 'Invalid Email or Password' });
+    res.status(401).send();
   }
 });
 

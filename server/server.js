@@ -23,6 +23,7 @@ mongoose
   })
   .catch((error) => console.log(error.reason));
 
+app.use(express.json()); //To parses incoming requests with JSON payloads.
 app.use(morgan('tiny'));
 app.use('/api/users', userRoute);
 app.get('/api/products', (req, res) => {
