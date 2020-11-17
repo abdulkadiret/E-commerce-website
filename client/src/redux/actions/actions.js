@@ -48,4 +48,18 @@ const removeFromCart = (productId) => async (dispatch) => {
   }
 };
 
-export { listProducts, detailsProduct, addToCart, removeFromCart };
+const signin = (email, password) => async (dispatch) => {
+  dispatch({ type: actions.USER_SIGNIN_REQUEST, payload: { email, password } });
+  try {
+    const { data } = await axios.post('/api/users/signin', { email, password });
+    dispatch({ type: actions.USER_SIGNIN_SUCCESS, payload: data });
+  } catch (error) {
+    const customMessage = 'Invalid email or password';
+    dispatch({
+      type: actions.USER_SIGNIN_FAIL,
+      payload: { customMessage },
+    });
+  }
+};
+
+export { listProducts, detailsProduct, addToCart, removeFromCart, signin };
