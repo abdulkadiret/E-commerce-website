@@ -32,7 +32,7 @@ const Signin = (props) => {
             <h2 className='signin__heading'>Sign-in</h2>
             {loading && <span className='text__center'>Loading... </span>}
             {error && (
-              <span className='text__center'>{error.customMessage}</span>
+              <span className='text__center error'>{error.customMessage}</span>
             )}
           </div>
           <div>
