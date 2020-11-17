@@ -29,7 +29,7 @@ const Signin = (props) => {
       <form onSubmit={handleSubmit}>
         <div className='signin__container'>
           <div className='text__center'>
-            <h2 className='signin__heading'>Signin</h2>
+            <h2 className='signin__heading'>Sign-in</h2>
             {loading && <span className='text__center'>Loading... </span>}
             {error && (
               <span className='text__center'>{error.customMessage}</span>
