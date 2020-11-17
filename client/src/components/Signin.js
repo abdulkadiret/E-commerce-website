@@ -1,18 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { signin } from '../redux/actions/actions';
 
 const Signin = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const userSignin = useSelector((state) => state.userSignin);
+  const { loading, userInfo, error } = userSignin;
+  const dispatch = useDispatch();
 
   useEffect(() => {
+    if (userInfo) {
+      props.history.push('/');
+    }
     return () => {
       //
     };
-  }, []);
+  }, [userInfo]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(signin(email, password));
   };
 
   return (
@@ -20,7 +29,11 @@ const Signin = (props) => {
       <form onSubmit={handleSubmit}>
         <div className='signin__container'>
           <div className='text__center'>
-            <h2 className='signin__heading'>Sign-in</h2>
+            <h2 className='signin__heading'>Signin</h2>
+            {loading && <span className='text__center'>Loading... </span>}
+            {error && (
+              <span className='text__center'>{error.customMessage}</span>
+            )}
           </div>
           <div>
             <label htmlFor='email'>Email</label>
