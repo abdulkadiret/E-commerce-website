@@ -4,7 +4,7 @@ import data from './data';
 import dotenv from 'dotenv';
 import config from './config';
 import mongoose from 'mongoose';
-import userRoute from './routes/userRoute';
+import authRoutes from './routes/authRoutes';
 import morgan from 'morgan';
 
 dotenv.config();
@@ -23,9 +23,11 @@ mongoose
   })
   .catch((error) => console.log(error.reason));
 
-app.use(express.json()); //To parses incoming requests with JSON payloads.
+// middlewares
+app.use(express.json()); // for body parser
 app.use(morgan('tiny'));
-app.use('/api/users', userRoute);
+// route middlewares
+app.use('/api/users', authRoutes);
 app.get('/api/products', (req, res) => {
   res.send(data.products);
 });
